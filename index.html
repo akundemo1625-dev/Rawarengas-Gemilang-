@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administrasi Desa Rawarengas Gemilang</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <img src="assets/logo.svg" alt="Logo Desa" class="logo">
+        <div>
+          <strong>Rawarengas Gemilang</strong><br>
+          <small class="muted">Portal Administrasi Desa</small>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#layanan">Layanan</a></li>
+          <li><a href="#formulir">Formulir</a></li>
+          <li><a href="#pengumuman">Pengumuman</a></li>
+          <li><a href="#aparatur">Aparatur</a></li>
+          <li><a href="#anggaran">Anggaran</a></li>
+          <li><a href="#agenda">Agenda</a></li>
+          <li><a href="#peta">Peta</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Administrasi Cepat, Transparan, dan Mudah</h1>
+      <p>Ajukan surat, unduh berkas, cek status, dan pantau kegiatan desa dalam satu tempat.</p>
+    </div>
+  </section>
+
+  <!-- Konten utama -->
+  <main class="container">
+    <section id="layanan">
+      <h2>📑 Layanan Administrasi</h2>
+      <div id="services" class="grid-3"></div>
+    </section>
+
+    <section id="formulir">
+      <h2>📝 Formulir Permohonan</h2>
+      <form id="requestForm" method="POST" action="https://formspree.io/f/your-endpoint">
+        <label>Nama Lengkap <input required name="nama"></label>
+        <label>NIK <input required name="nik" pattern="[0-9]{16}"></label>
+        <label>Layanan
+          <select id="layananSelect" name="layanan"></select>
+        </label>
+        <button type="submit">Kirim</button>
+        <span id="formMsg"></span>
+      </form>
+    </section>
+
+    <section id="pengumuman">
+      <h2>📢 Pengumuman</h2>
+      <div id="news" class="grid-3"></div>
+    </section>
+
+    <section id="aparatur">
+      <h2>👥 Aparatur Desa</h2>
+      <div id="staff" class="grid-4"></div>
+    </section>
+
+    <section id="anggaran">
+      <h2>💰 Anggaran Desa</h2>
+      <table id="budget" class="table"></table>
+    </section>
+
+    <section id="agenda">
+      <h2>🗓️ Agenda</h2>
+      <div id="events" class="grid-3"></div>
+    </section>
+
+    <section id="peta">
+      <h2>🗺️ Peta Desa</h2>
+      <iframe class="map" src="https://www.openstreetmap.org/export/embed.html?bbox=106.7%2C-6.3%2C107.0%2C-6.0"></iframe>
+    </section>
+
+    <section id="kontak">
+      <h2>📬 Kontak</h2>
+      <p>📞 +62 812-0000-0000 | ✉️ admin@desa.go.id</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> Desa Rawarengas Gemilang</p>
+    </div>
+  </footer>
+</body>
+</html>
