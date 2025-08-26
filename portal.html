@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portal Administrasi Desa</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script defer src="assets/firebase-config.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Portal Administrasi Desa</h1>
+  </header>
+  <main>
+    <section id="authSection">
+      <h2>Login</h2>
+      <input type="email" id="email" placeholder="Masukkan email">
+      <button onclick="sendLoginLink()">Kirim Link Login</button>
+      <p id="authMsg"></p>
+    </section>
+
+    <section id="portalSection" style="display:none;">
+      <h2>Selamat datang <span id="userName"></span></h2>
+      <p>Status: <span id="userStatus"></span></p>
+      <button onclick="logout()">Keluar</button>
+    </section>
+  </main>
+</body>
+</html>
